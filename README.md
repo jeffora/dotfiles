@@ -1,2 +1,2 @@
-dotfiles
-========
+# Dot files #
+One day I'll learn how to use these properly...
