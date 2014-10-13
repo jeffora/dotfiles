@@ -20,3 +20,4 @@ fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendo
 fresh zsh-users/zsh-syntax-highlighting highlighters/main/main-highlighter.zsh --file=vendor/highlighters/main/main-highlighter.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/brackets/brackets-highlighter.zsh --file=vendor/highlighters/brackets/brackets-highlighter.zsh
 fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc --marker
+fresh twe4ked/dotfiles bin/git-author --bin=~/bin/git-author
