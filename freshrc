@@ -19,6 +19,7 @@ fresh-options --file=~/.zshrc --marker
   fresh twe4ked/dotfiles shell/zsh/prompt.zsh
   fresh shell/zshrc
   fresh shell/rbenv
+  fresh shell/npm
 fresh-options
 
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
