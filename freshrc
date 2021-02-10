@@ -14,12 +14,41 @@ fresh-options --file
   fresh config/\*
 fresh-options
 
+# fresh-options --file=~/.vimrc --marker='"'
+#   fresh vim/leader.vim
+#   fresh vim/plug.vim
+#   fresh vim/config/\*
+#   fresh vim/vimrc
+#   fresh jasoncodes/dotfiles vim/mappings/indent.vim
+#   fresh jasoncodes/dotfiles vim/mappings/pasteboard.vim
+#   fresh jasoncodes/dotfiles vim/mappings/whitespace.vim --filter=filter_vundle_lines
+#   fresh jasoncodes/dotfiles vim/config/undo.vim
+#   fresh jasoncodes/dotfiles vim/config/auto_mkdir.vim
+#   fresh jasoncodes/dotfiles vim/config/search.vim --filter=filter_vundle_lines
+#   fresh jasoncodes/dotfiles vim/config/cursor.vim
+#   fresh jasoncodes/dotfiles vim/config/bubbling.vim --filter=filter_vundle_lines
+#   fresh jasoncodes/dotfiles vim/functions.vim
+#   fresh jasoncodes/dotfiles vim/plugins/markdown.vim --filter=filter_vundle_lines
+#   fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter=filter_vundle_lines
+#   fresh hackling/dotfiles vim/keybindings/filename-to-clipboard.vim
+# fresh-options
+
+fresh-options --file=~/.vimrc --marker='"'
+  fresh vim/header.vim
+  fresh vim/plug.vim
+  fresh vim/vimrc
+fresh-options
+fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
+
 fresh-options --file=~/.zshrc --marker
   fresh twe4ked/dotfiles shell/zsh/completion.zsh
   fresh twe4ked/dotfiles shell/zsh/prompt.zsh
   fresh shell/zshrc
+  fresh shell/android
   fresh shell/rbenv
   fresh shell/npm
+  fresh shell/aws
+  fresh shell/yarn
 fresh-options
 
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh

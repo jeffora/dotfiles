@@ -1,6 +1,4 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export GOPATH="$HOME/go"
-# export AWS_PROFILE=playground
-export AWS_DEFAULT_REGION=ap-southeast-2
 
 source ~/.fresh/build/shell.sh

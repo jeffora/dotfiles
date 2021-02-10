@@ -1,0 +1,72 @@
+# aws-cli / aws-sdk config
+export AWS_DEFAULT_REGION=ap-southeast-2
+export AWS_DEFAULT_OUTPUT=json
+export AWS_SDK_LOAD_CONFIG=1
+
+# aws-vault config
+export AWS_VAULT_KEYCHAIN_NAME=login
+export AWS_VAULT_PROMPT=osascript
+export AWS_SESSION_TTL=24h
+
+# AWS-env-specific aliases
+# exec command as prod if AWS_PROFILE is unset
+master() {
+  aws-vault exec work -- "$@"
+}
+
+prod() {
+  AWS_PROFILE=${AWS_PROFILE:-prod} "$@"
+}
+
+# exec command as staging if AWS_PROFILE is unset
+staging() {
+  AWS_PROFILE=${AWS_PROFILE:-staging} "$@"
+}
+
+# exec command as playground if AWS_PROFILE is unset
+playground() {
+  AWS_PROFILE=${AWS_PROFILE:-playground} "$@"
+}
+
+# exec command as ops if AWS_PROFILE is unset
+ops() {
+  AWS_PROFILE=${AWS_PROFILE:-ops} "$@"
+}
+
+# exec aws subcommand as prod if AWS_PROFILE is unset
+aws-prod() {
+  prod aws "$@"
+}
+
+# exec aws subcommand as staging if AWS_PROFILE is unset
+aws-staging() {
+  staging aws "$@"
+}
+
+# exec aws subcommand as playground if AWS_PROFILE is unset
+aws-playground() {
+  playground aws "$@"
+}
+
+# exec aws subcommand as ops if AWS_PROFILE is unset
+aws-ops() {
+  ops aws "$@"
+}
+
+# quickly retrieve a secret value
+aws-secret() {
+  aws secretsmanager get-secret-value --secret-id $1 | jq -r .SecretString
+}
+
+# Vault shortcuts for runnig scripts that don't respect AWS_PROFILE
+vault-prod() {
+  aws-vault exec work-prod -- "$@"
+}
+
+vault-staging() {
+  aws-vault exec work-staging -- "$@"
+}
+
+vault-ops() {
+  aws-vault exec work-ops -- "$@"
+}
