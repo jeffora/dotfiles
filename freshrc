@@ -46,9 +46,8 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/zshrc
   fresh shell/android
   fresh shell/rbenv
-  fresh shell/npm
+  fresh shell/node
   fresh shell/aws
-  fresh shell/yarn
 fresh-options
 
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
@@ -59,5 +58,7 @@ fresh zsh-users/zsh-syntax-highlighting .revision-hash --file=vendor/.revision-h
 fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc --marker
 
 fresh twe4ked/dotfiles bin/git-author --bin=~/bin/git-author
+
+fresh bin/\* --bin
 
 fresh shell/aliases/\*

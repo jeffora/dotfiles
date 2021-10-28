@@ -13,3 +13,9 @@
   filemode = true
 [push]
   default = simple
+[pull]
+  rebase = true
+[rebase]
+  autostash = true
+[help]
+  autocorrect = 10

@@ -59,14 +59,18 @@ aws-secret() {
 }
 
 # Vault shortcuts for runnig scripts that don't respect AWS_PROFILE
-vault-prod() {
+prod-exec() {
   aws-vault exec work-prod -- "$@"
 }
 
-vault-staging() {
+staging-exec() {
   aws-vault exec work-staging -- "$@"
 }
 
-vault-ops() {
+ops-exec() {
   aws-vault exec work-ops -- "$@"
+}
+
+playground-exec() {
+  aws-vault exec work-playground -- "$@"
 }
