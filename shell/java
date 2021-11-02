@@ -1,0 +1,4 @@
+# configure path with java
+if [[ -f /opt/homebrew/opt/openjdk/bin/java ]]; then
+  export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+fi

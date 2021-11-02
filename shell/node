@@ -1,3 +1,7 @@
+# n configuration
+export N_PREFIX="$HOME/.n"
+export PATH="$HOME/.n/bin:$PATH"
+
 # npm setup
 mkdir -p $HOME/.npm-global
 export NPM_CONFIG_PREFIX="$HOME/.npm-global"
@@ -8,3 +12,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # node options
 export NODE_OPTIONS="--max-old-space-size=8192 --preserve-symlinks"
+
