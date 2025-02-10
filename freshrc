@@ -47,9 +47,12 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/brew
   fresh shell/java
   fresh shell/android
-  fresh shell/rbenv
+  fresh shell/ruby
   fresh shell/node
   fresh shell/aws
+  fresh shell/mysql
+  fresh shell/buildkite
+  fresh shell/1password
 fresh-options
 
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
@@ -63,4 +66,16 @@ fresh twe4ked/dotfiles bin/git-author --bin=~/bin/git-author
 
 fresh bin/\* --bin
 
+fresh awslabs/aws-support-tools Lambda/FindEniMappings/findEniAssociations --bin=~/bin/find-eni-associations
+
+fresh newren/git-filter-repo git-filter-repo --bin=~/bin/git-filter-repo
+
 fresh shell/aliases/\*
+
+fresh-options --file=~/.ssh/config --marker
+  fresh agriwebb/dotfiles .ssh/config
+  fresh config/ssh/agriwebb.config
+  fresh config/ssh/local.config
+  # fresh config/ssh/aw-ec2.config
+  # fresh config/ssh/aw-office-build.legacy.config
+fresh-options

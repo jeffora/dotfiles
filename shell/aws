@@ -2,6 +2,7 @@
 export AWS_DEFAULT_REGION=ap-southeast-2
 export AWS_DEFAULT_OUTPUT=json
 export AWS_SDK_LOAD_CONFIG=1
+export AWS_SDK_JS_SUPPRESS_MAINTENANCE_MODE_MESSAGE=true
 
 # aws-vault config
 export AWS_VAULT_KEYCHAIN_NAME=login

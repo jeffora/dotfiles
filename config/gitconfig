@@ -9,13 +9,18 @@
   pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr-$1 && git checkout pr-$1; }; f"
   tagv = "!f() { git tag -a -m "v$1" "v$1"; }; f"
   pushup = "!f() { git push --set-upstream origin \"$(git branch --show-current)\"; }; f"
+  cleanup = clean -xdfq
 [core]
   filemode = true
 [push]
   default = simple
+[fetch]
+  prune = true
 [pull]
   rebase = true
 [rebase]
   autostash = true
 [help]
   autocorrect = 10
+[init]
+  defaultBranch = main
