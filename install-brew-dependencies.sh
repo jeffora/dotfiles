@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-formula=(jq aws-vault openjdk htop gradle rbenv)
+formula=(jq aws-vault openjdk htop gradle 1password-cli gh)
 
 if [[ -f "$(which brew)" ]]; then
   for i in ${formula[@]}; do

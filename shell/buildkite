@@ -1,5 +1,2 @@
-# # GraphQL
-# export BUILDKITE_TOKEN=bkua_332ebbedad876ec31084ab3237db58b583608163
-
 # Full Access
-export BUILDKITE_TOKEN=bkua_13eca99f6d9d297489a3140f593d4ddf04161653
+export BUILDKITE_TOKEN=""

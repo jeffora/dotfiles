@@ -70,6 +70,8 @@ fresh awslabs/aws-support-tools Lambda/FindEniMappings/findEniAssociations --bin
 
 fresh newren/git-filter-repo git-filter-repo --bin=~/bin/git-filter-repo
 
+fresh tj/n bin/n --bin=~/bin/n
+
 fresh shell/aliases/\*
 
 fresh-options --file=~/.ssh/config --marker
