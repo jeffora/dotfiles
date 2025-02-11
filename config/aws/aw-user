@@ -1,0 +1,43 @@
+[default]
+credential_process=aws-vault exec work-playground --json
+
+[profile work]
+mfa_serial=arn:aws:iam::560061543345:mfa/jeff.burn
+credential_process=aws-vault exec work --json
+mfa_process=op --account my.1password.com item get "AWS - AgriWebb Payer" --otp
+
+[profile playground]
+credential_process=aws-vault exec work-playground --json
+
+[profile ops]
+credential_process=aws-vault exec work-ops --json
+
+[profile staging]
+credential_process=aws-vault exec work-staging --json
+
+[profile prod]
+credential_process=aws-vault exec work-prod --json
+
+[profile work-playground]
+source_profile=work
+mfa_serial=arn:aws:iam::560061543345:mfa/jeff.burn
+mfa_process=op --account my.1password.com item get "AWS - AgriWebb Payer" --otp
+role_arn=arn:aws:iam::748446198525:role/playground-dev
+
+[profile work-ops]
+source_profile=work
+mfa_serial=arn:aws:iam::560061543345:mfa/jeff.burn
+mfa_process=op --account my.1password.com item get "AWS - AgriWebb Payer" --otp
+role_arn=arn:aws:iam::387672753307:role/ops-dev-admin
+
+[profile work-staging]
+source_profile=work
+mfa_serial=arn:aws:iam::560061543345:mfa/jeff.burn
+mfa_process=op --account my.1password.com item get "AWS - AgriWebb Payer" --otp
+role_arn=arn:aws:iam::598117122758:role/staging-dev
+
+[profile work-prod]
+source_profile=work
+mfa_serial=arn:aws:iam::560061543345:mfa/jeff.burn
+mfa_process=op --account my.1password.com item get "AWS - AgriWebb Payer" --otp
+role_arn=arn:aws:iam::073065580947:role/prod-dev

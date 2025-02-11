@@ -81,3 +81,11 @@ fresh-options --file=~/.ssh/config --marker
   # fresh config/ssh/aw-ec2.config
   # fresh config/ssh/aw-office-build.legacy.config
 fresh-options
+
+fresh-options --file=~/.aws/config --marker
+  fresh config/aws/aw-user
+  fresh config/aws/personal
+  fresh config/aws/terraform
+fresh-options
+
+fresh config/aws/credentials --file=~/.aws/credentials

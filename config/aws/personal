@@ -1,0 +1,3 @@
+[profile personal]
+credential_process=aws-vault exec personal --json
+mfa_serial=arn:aws:iam::557811220753:mfa/jeffora.dev
