@@ -11,6 +11,10 @@
   pushup = "!f() { git push --set-upstream origin \"$(git branch --show-current)\"; }; f"
   cleanup = clean -xdfq
   diffs = diff --staged
+  wt = worktree
+  wta = worktree add
+  wtl = worktree list
+  wtr = worktree remove
 [core]
   filemode = true
 [push]

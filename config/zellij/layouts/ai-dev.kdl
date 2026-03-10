@@ -1,0 +1,27 @@
+// AI Development layout — focused on AI-assisted coding workflows
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="ai" focus=true {
+        pane name="copilot/claude"
+    }
+
+    tab name="code" {
+        pane split_direction="vertical" {
+            pane name="editor" size="70%"
+            pane name="terminal" size="30%"
+        }
+    }
+
+    tab name="shell" {
+        pane
+    }
+}

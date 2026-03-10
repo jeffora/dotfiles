@@ -1,1 +1,5 @@
-alias zj=zellij -l session-picker
+alias zj='zellij -l session-picker'
+alias zja='zellij attach'
+alias zjl='zellij list-sessions'
+alias zjk='zellij kill-session'
+alias zjn='zellij --session'
