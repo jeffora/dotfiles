@@ -40,6 +40,8 @@ fresh-options --file=~/.vimrc --marker='"'
 fresh-options
 fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
 
+fresh --file=~/.ideavimrc vim/ideavimrc
+
 fresh-options --file=~/.zshrc --marker
   fresh twe4ked/dotfiles shell/zsh/completion.zsh
   fresh twe4ked/dotfiles shell/zsh/prompt.zsh
@@ -53,6 +55,7 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/mysql
   fresh shell/buildkite
   fresh shell/1password
+  fresh shell/zellij
 fresh-options
 
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
@@ -60,7 +63,10 @@ fresh zsh-users/zsh-syntax-highlighting highlighters/main/main-highlighter.zsh -
 fresh zsh-users/zsh-syntax-highlighting highlighters/brackets/brackets-highlighter.zsh --file=vendor/highlighters/brackets/brackets-highlighter.zsh
 fresh zsh-users/zsh-syntax-highlighting .version --file=vendor/.version
 fresh zsh-users/zsh-syntax-highlighting .revision-hash --file=vendor/.revision-hash
-fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc --marker
+# fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc --marker
+
+fresh catppuccin/zsh-syntax-highlighting themes/catppuccin_mocha-zsh-syntax-highlighting.zsh --file=~/.zshrc --marker
+fresh shell/zsh-syntax-highlighting.zsh --file=~/.zshrc --marker
 
 fresh twe4ked/dotfiles bin/git-author --bin=~/bin/git-author
 
@@ -75,7 +81,7 @@ fresh tj/n bin/n --bin=~/bin/n
 fresh shell/aliases/\*
 
 fresh-options --file=~/.ssh/config --marker
-  fresh agriwebb/dotfiles .ssh/config
+  # fresh agriwebb/dotfiles .ssh/config
   fresh config/ssh/agriwebb.config
   fresh config/ssh/local.config
   # fresh config/ssh/aw-ec2.config
@@ -89,3 +95,8 @@ fresh-options --file=~/.aws/config --marker
 fresh-options
 
 fresh config/aws/credentials --file=~/.aws/credentials
+
+fresh config/ghostty/config --file=~/.config/ghostty/config
+
+fresh config/zellij/config.kdl --file=~/.config/zellij/config.kdl
+fresh config/zellij/layouts/default.kdl --file=~/.config/zellij/layouts/default.kdl

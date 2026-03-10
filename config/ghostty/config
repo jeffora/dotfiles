@@ -1,0 +1,13 @@
+theme = Catppuccin Mocha
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+font-size = 14
+font-family = "Fira Code"
+
+copy-on-select = clipboard
+quit-after-last-window-closed = true
+macos-option-as-alt = left
+confirm-close-surface = false
+

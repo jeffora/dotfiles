@@ -1,6 +1,6 @@
 # Install amazon corretto 8 from https://aws.amazon.com/corretto/
 export JAVA_HOME=$(/usr/libexec/java_home)
-export ANDROID_SDK_ROOT=/Users/jeff/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 
 export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH

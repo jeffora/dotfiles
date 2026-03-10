@@ -1,0 +1,5 @@
+let mapleader=","
+
+map gf <Action>(SelectInProjectView)
+map <leader>f <Action>(GotoFile)
+map <leader>@ <Action>(GotoSymbol)

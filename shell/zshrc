@@ -1,4 +1,6 @@
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.tally/bin:$PATH"
 export GOPATH="$HOME/go"
+export NX_TUI=false
+export TENV_AUTO_INSTALL=true
 
 source ~/.fresh/build/shell.sh

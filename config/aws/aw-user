@@ -41,3 +41,15 @@ source_profile=work
 mfa_serial=arn:aws:iam::560061543345:mfa/jeff.burn
 mfa_process=op --account my.1password.com item get "AWS - AgriWebb Payer" --otp
 role_arn=arn:aws:iam::073065580947:role/prod-dev
+
+[profile instructor]
+
+[profile team-chicago]
+
+[profile team-bradford]
+
+[profile team-pamplona]
+
+[profile team-durham]
+
+[profile team-turin]

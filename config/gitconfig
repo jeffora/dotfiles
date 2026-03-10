@@ -10,6 +10,7 @@
   tagv = "!f() { git tag -a -m "v$1" "v$1"; }; f"
   pushup = "!f() { git push --set-upstream origin \"$(git branch --show-current)\"; }; f"
   cleanup = clean -xdfq
+  diffs = diff --staged
 [core]
   filemode = true
 [push]

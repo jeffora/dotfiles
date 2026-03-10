@@ -8,4 +8,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'w0rp/ale'
 
+" vim surround
+Plug 'tpope/vim-surround'
+
 call plug#end()
