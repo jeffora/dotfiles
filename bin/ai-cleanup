@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Clean up an AI-focused feature worktree
+# Usage: ai-cleanup <feature-name>
+# Removes worktree at: ../copilot-{project-name}-{feature-name}
+set -euo pipefail
+
+feature="${1:?Usage: ai-cleanup <feature-name>}"
+
+# Get repo info
+repo_root="$(git rev-parse --show-toplevel)" || {
+  echo "Error: Not in a git repository"
+  exit 1
+}
+repo_name="$(basename "$repo_root")"
+
+# Worktree directory path
+worktree_dir="$(dirname "$repo_root")/copilot-${repo_name}-${feature}"
+
+# Remove worktree if it exists
+if [ -d "$worktree_dir" ]; then
+  echo "Removing worktree at $worktree_dir"
+  git worktree remove "$worktree_dir"
+  echo "✓ Worktree removed: $worktree_dir"
+else
+  echo "No worktree found at $worktree_dir"
+fi
+
+# Note: Zellij tab will still exist but won't have an active directory
+# User can close it manually with Ctrl+t x

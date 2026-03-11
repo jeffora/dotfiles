@@ -1,5 +1,6 @@
-// Zellij config — only non-default settings
-// All keybindings use upstream defaults (no clear-defaults)
+// Zellij config — minimal defaults override
+// Keybindings use upstream defaults (no clear-defaults)
+// This enables default tab-based workflow
 
 theme "catppuccin-mocha"
 default_layout "default"
@@ -8,17 +9,3 @@ pane_frames false
 scrollback_editor "/opt/homebrew/bin/nvim"
 session_serialization true
 serialize_pane_viewport true
-
-// Autolock plugin — auto-enters locked mode when CLI tools need raw input
-// Download: https://github.com/fresh8gaming/zellij-autolock/releases
-// Place .wasm at: ~/.config/zellij/plugins/zellij-autolock.wasm
-plugins {
-    autolock location="file:~/.config/zellij/plugins/zellij-autolock.wasm" {
-        triggers "nvim|vim|git|fzf|zoxide|atuin|claude|copilot"
-        watch_triggers "nvim|vim"
-        reaction_seconds "0.3"
-    }
-}
-load_plugins {
-    autolock
-}

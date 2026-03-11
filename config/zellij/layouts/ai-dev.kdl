@@ -1,4 +1,8 @@
-// AI Development layout — focused on AI-assisted coding workflows
+// AI Development tab layout
+// Designed to be opened as a new tab: zellij action new-tab --layout ai-dev
+// Structure:
+//   - Top pane: Copilot CLI (focused, full width)
+//   - Bottom pane: Shell (for tests, output)
 layout {
     default_tab_template {
         pane size=1 borderless=true {
@@ -10,18 +14,10 @@ layout {
         }
     }
 
-    tab name="ai" focus=true {
-        pane name="copilot/claude"
-    }
-
-    tab name="code" {
+    tab focus=true {
         pane split_direction="vertical" {
-            pane name="editor" size="70%"
-            pane name="terminal" size="30%"
+            pane name="copilot" size="65%" command="copilot"
+            pane name="shell" size="35%"
         }
-    }
-
-    tab name="shell" {
-        pane
     }
 }
