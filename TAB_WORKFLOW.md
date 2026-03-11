@@ -156,8 +156,49 @@ ai-cleanup auth-feature    # Removes worktree
 # If you just need copilot interaction in main project
 cd ~/projects/backend
 zj
+# Option 1: Use alias
 zjta                # Opens "ai" tab with copilot ready
+
+# Option 2: Use keyboard shortcut
+Ctrl+Alt+a          # Opens "ai" tab with ai-dev layout (same as zjta)
 ```
+
+## Layout & Pane Management
+
+### Creating Tabs with Layouts
+
+**From shell (inside Zellij):**
+```bash
+zjta                  # Open ai-dev tab (alias)
+Ctrl+Alt+a            # Open ai-dev tab (keyboard shortcut)
+Ctrl+t n              # Open generic new tab
+```
+
+**From shell command:**
+```bash
+zellij action new-tab --layout ai-dev --name mytab
+zellij action new-tab --name work
+```
+
+### Swapping Layouts Within a Tab
+
+**Default Zellij swap layout navigation:**
+```
+Alt+[     Previous swap layout (cycle through pane arrangements)
+Alt+]     Next swap layout (cycle through pane arrangements)
+```
+
+**When to use:**
+- You have multiple `swap_tiled_layout` definitions in your layout file
+- Want to rearrange panes without losing content
+- Need different pane arrangements for the same tab
+
+**Example:** If ai-dev.kdl had swap layouts defined, you could:
+1. Open ai-dev tab: `Ctrl+Alt+a`
+2. Rearrange panes: `Alt+]` (cycle to next arrangement)
+3. Content stays, but pane layout changes
+
+**Note:** Currently, our layouts (default.kdl, ai-dev.kdl) don't use swap layouts, but you can add them if needed.
 
 ## Keyboard Shortcuts (Default Zellij)
 
@@ -181,6 +222,20 @@ Ctrl+p      Enter pane mode
   d         New pane (down - alternative)
   x         Close pane
   f         Fullscreen pane
+```
+
+### Custom Shortcuts (Configured)
+```
+Ctrl+Alt+a  Create new ai-dev tab (in current cwd)
+            Quick access to copilot pane without worktree
+```
+
+### Swap Layouts (Switch between pane arrangements)
+```
+Alt+[       Previous swap layout
+Alt+]       Next swap layout
+            Cycle through predefined layouts in current tab
+            Note: Only works if tab has swap layouts defined
 ```
 
 ### Navigation (any mode)

@@ -9,3 +9,14 @@ pane_frames false
 scrollback_editor "/opt/homebrew/bin/nvim"
 session_serialization true
 serialize_pane_viewport true
+
+// Custom keybindings for enhanced workflow
+keybinds {
+    // Create new ai-dev tab with Ctrl+Alt+a
+    normal {
+        bind "Ctrl Alt a" {
+            NewTab { layout "ai-dev"; name "ai"; }
+            SwitchToMode "normal"
+        }
+    }
+}
