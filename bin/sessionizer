@@ -1,0 +1,16 @@
+#!/opt/homebrew/bin/bash
+# Zellij sessionizer wrapper - uses Homebrew bash (v5.3+) for associative array support
+# This script is needed because macOS's system bash (3.2) doesn't support bash 4+ features
+
+# Get the path to the fresh-installed zellij-sessionizer script
+SESSIONIZER_SCRIPT="$HOME/.fresh/build/bin/zellij-sessionizer"
+
+# Check if it exists
+if [[ ! -f "$SESSIONIZER_SCRIPT" ]]; then
+    echo "Error: zellij-sessionizer not found at $SESSIONIZER_SCRIPT"
+    echo "Run 'fresh' to install it"
+    exit 1
+fi
+
+# Pass all arguments to the real script
+exec /opt/homebrew/bin/bash "$SESSIONIZER_SCRIPT" "$@"
