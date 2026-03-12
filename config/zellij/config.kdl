@@ -10,11 +10,6 @@ scrollback_editor "/opt/homebrew/bin/nvim"
 session_serialization true
 serialize_pane_viewport true
 
-// Plugins
-plugins {
-    zellij-switch location = "file:///Users/jeff.burn/.config/zellij/plugins/zellij-switch.wasm"
-}
-
 // Custom keybindings for enhanced workflow
 keybinds {
     // Create new ai-dev tab with Ctrl+Alt+a
@@ -22,20 +17,6 @@ keybinds {
         bind "Ctrl Alt a" {
             NewTab { layout "ai-dev"; name "ai"; }
             SwitchToMode "normal"
-        }
-    }
-    // Launch zellij-sessionizer with Ctrl+Alt+s
-    normal {
-        bind "Ctrl Alt s" {
-            Run "sessionizer" {
-                close_on_exit true
-                floating true
-                x "30%"
-                y "10%"
-                width "40%"
-                height "80%"
-            }
-            SwitchToMode "locked"
         }
     }
 }
