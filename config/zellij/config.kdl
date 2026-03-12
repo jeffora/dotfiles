@@ -19,4 +19,9 @@ keybinds {
             SwitchToMode "normal"
         }
     }
+    // Unbind Alt+Left and Alt+Right to allow shell word navigation
+    normal {
+        bind "Alt Left" { }
+        bind "Alt Right" { }
+    }
 }
