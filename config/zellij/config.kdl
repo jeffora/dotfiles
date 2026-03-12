@@ -14,14 +14,11 @@ serialize_pane_viewport true
 keybinds {
     // Create new ai-dev tab with Ctrl+Alt+a
     normal {
+        unbind "Alt f"
+        bind "Alt F" {  ToggleFloatingPanes; }
         bind "Ctrl Alt a" {
             NewTab { layout "ai-dev"; name "ai"; }
             SwitchToMode "normal"
         }
-    }
-    // Unbind Alt+Left and Alt+Right to allow shell word navigation
-    normal {
-        bind "Alt Left" { }
-        bind "Alt Right" { }
     }
 }
