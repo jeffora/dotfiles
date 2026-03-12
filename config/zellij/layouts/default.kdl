@@ -1,4 +1,5 @@
-// Default layout - single tab with a full-width shell pane
+// Default layout - single shell tab
+// Simple, clean entry point for any Zellij session
 layout {
     default_tab_template {
         pane size=1 borderless=true {
@@ -10,7 +11,7 @@ layout {
         }
     }
 
-    tab name="main" {
+    tab name="shell" {
         pane
     }
 }

@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Create a git worktree for an AI-focused feature branch and open ai-dev tab
+# Usage: ai <feature-name>
+# Creates worktree at: ../copilot-{project-name}-{feature-name}
+# Opens ai-dev tab pointing to that worktree
+set -euo pipefail
+
+feature="${1:?Usage: ai <feature-name>}"
+
+# Get repo info
+repo_root="$(git rev-parse --show-toplevel)" || {
+  echo "Error: Not in a git repository"
+  exit 1
+}
+repo_name="$(basename "$repo_root")"
+
+# Create worktree directory path (sibling with copilot- prefix)
+worktree_dir="$(dirname "$repo_root")/copilot-${repo_name}-${feature}"
+
+# Check if worktree already exists
+if [ -d "$worktree_dir" ]; then
+  echo "Worktree already exists at $worktree_dir"
+  cd "$worktree_dir"
+else
+  # Create the worktree with branch name matching feature
+  echo "Creating worktree at $worktree_dir"
+  git worktree add "$worktree_dir" -b "ai/${feature}" HEAD
+  cd "$worktree_dir"
+  echo "✓ Worktree created"
+fi
+
+echo "Opening ai-dev tab in $worktree_dir"
+
+# Open ai-dev tab in current Zellij session
+# The ai-dev layout will be loaded with this directory as cwd
+zellij action new-tab --layout ai-dev --name "${feature}"
+
+echo "✓ AI tab opened for feature: $feature"
+echo "   Worktree: $worktree_dir"
+echo "   Tab name: ai-${feature}"

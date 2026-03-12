@@ -1,1 +1,7 @@
-alias zj=zellij -l session-picker
+alias zj='zellij'
+alias zja='zellij attach'
+alias zjl='zellij list-sessions'
+alias zjk='zellij kill-session'
+alias zjn='zellij --session'
+alias zjt='zellij action new-tab'                    # Open new generic tab
+alias zjta='zellij action new-tab --layout ai-dev --name ai'  # Open new AI-dev tab
